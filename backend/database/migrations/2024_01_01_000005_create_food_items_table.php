@@ -45,7 +45,7 @@ return new class extends Migration
             $table->index('brand');
             $table->index(['is_verified', 'is_public']);
             $table->index('created_by_user_id');
-            $table->fullText(['food_name', 'brand']);
+            // Note: Fulltext index not supported in SQLite
         });
     }
 

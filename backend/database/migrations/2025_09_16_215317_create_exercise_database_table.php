@@ -36,7 +36,7 @@ return new class extends Migration
             $table->index(['is_verified', 'is_public']);
             $table->index('difficulty_level');
             $table->index('created_by_user_id');
-            $table->fullText(['exercise_name', 'description']);
+            // Note: Fulltext index not supported in SQLite
         });
     }
 
